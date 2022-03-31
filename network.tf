@@ -7,24 +7,24 @@ resource "aws_vpc" "example" {
   }
 }
 
-# # subnet
-# resource "aws_subnet" "public_subnet_1a" {
-#   vpc_id     = aws_vpc.example.id
-#   cidr_block = "10.0.1.0/24"
+# subnet
+resource "aws_subnet" "public_subnet_1a" {
+  vpc_id     = aws_vpc.example.id
+  cidr_block = "10.0.1.0/24"
 
-#   tags = {
-#     Name = "public_subnet_1a"
-#   }
-# }
+  tags = {
+    Name = "public_subnet_1a"
+  }
+}
 
-# resource "aws_subnet" "public_subnet_1c" {
-#   vpc_id     = aws_vpc.example.id
-#   cidr_block = "10.1.1.0/24"
+resource "aws_subnet" "public_subnet_1c" {
+  vpc_id     = aws_vpc.example.id
+  cidr_block = "10.1.1.0/24"
 
-#   tags = {
-#     Name = "public_subnet_1c"
-#   }
-# }
+  tags = {
+    Name = "public_subnet_1c"
+  }
+}
 
 # resource "aws_subnet" "private_subnet_1a" {
 #   vpc_id     = aws_vpc.example.id
